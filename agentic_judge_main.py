@@ -247,7 +247,7 @@ Available tools and their command formats:
 - **Sentence similarity**: `similarity "english phrase/sentence" "filipino phrase/sentence"`
 - **English Dictionary lookup**: `lookup_english "word"`
 - **Filipino Dictionary lookup**: `lookup_filipino "word"`
-Use them often, preferably for difficult cases, but not excessively. But check the tool notes in the json above first to avoid repeating the same queries.
+Use them often, preferably for difficult cases, but not excessively nor unnecessarily. But check the tool notes in the json above first to avoid repeating the same queries.
 
 You must output ONLY valid JSON.
 No extra text, code blocks, or explanations.
@@ -323,10 +323,10 @@ def main_loop(english_sentence=None, filipino_sentence=None, user_notes=[]):
 
     while True:
         main_prompt = MAIN_PROMPT.format(json=memory.__str__())
-        print(main_prompt)
+        # print(main_prompt)
         res = call_gemini(main_prompt)
         res = parse_json_response(res)
-        print(res)
+        # print(res)
 
         if res["ready_to_decide"]:
             print("Ready to decide!")
@@ -338,8 +338,8 @@ def main_loop(english_sentence=None, filipino_sentence=None, user_notes=[]):
             past_thoughts.append(f"Next steps: {res['steps']}")
 
             for step in res['steps']:
-                print(memory)
-                print()
+               #print(memory)
+                #print()
                 if step.startswith("ask"):
                     question = step.split("\"")[1]
                     print(question)
@@ -348,7 +348,7 @@ def main_loop(english_sentence=None, filipino_sentence=None, user_notes=[]):
                     user_input = input("Input: ")
                     update_prompt = UPDATE_PROMPT.format(json=memory.__str__(), input=user_input)
                     res2 = call_gemini(update_prompt)
-                    print(res2)
+                    # print(res2)
                     res2 = parse_json_response(res2)
                     for update in res2['updates']:
                         if update.startswith("english_sentence"):
