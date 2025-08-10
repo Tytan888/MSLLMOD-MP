@@ -1,0 +1,7 @@
+row_index,english_sentence,filipino_sentence,scores,variation_percent
+0,The children laughed and played under the afternoon sun.,Ang mga bata ay nagtawanan at naglaro sa ilalim ng hapon na araw.,"[4.125, 4.125, 4.125]",0.0
+10,"I didn’t want to go to the dentist, but I had to bite the bullet and get it over with.","Ayoko sanang pumunta sa dentista, pero kailangan kong tiisin ito para matapos na.","[4.625, 5.0, 4.625]",3.7216146378239348
+20,Which of the following dental topics is developmentally appropriate for toddlers?,Alin sa mga sumusunod na paksa sa ngipin ang angkop sa pag-unlad para sa mga paslit?,"[3.875, 3.875, 3.875]",0.0
+30,The database index speeds up data retrieval by reducing the number of disk accesses.,Pinapabilis ng database index ang pagkuha ng data sa pamamagitan ng pagbawas sa pag-access sa disk.,"[5.0, 5.0, 5.0]",0.0
+40,Eating rice with almost every meal is part of out culture,Bahagi ng ating kultura ang pagkain ng kanin sa halos bawat pagkain,"[5.0, 5.0, 5.0]",0.0
+50,"Things outside you are projections of what’s inside you, and what’s inside you is a projection of what’s outside.","Ang mga bagay sa labas mo ay salamin ng nasa loob mo, at ang nasa loob mo ay salamin ng nasa labas.","[5.0, 5.0, 5.0]",0.0

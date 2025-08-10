@@ -3,6 +3,7 @@ import json
 import time
 import argparse
 
+import numpy as np
 import pandas as pd
 
 import google.generativeai as genai
@@ -574,9 +575,53 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", help="Path to dataset CSV")
     parser.add_argument("--out", required=True, help="Output File Name")
+    parser.add_argument("--consistency", action="store_true", help="Consistency Check")
     args = parser.parse_args()
     
-    if args.dataset:
+    if args.dataset and args.consistency:
+        df = pd.read_csv(args.dataset)
+        required = {"Source Text (English)", "Target Text (Filipino)", "Final Score"}
+        if not required.issubset(df.columns):
+            raise ValueError(f"Dataset must contain columns: {required}")
+        try:
+            consistency_variations = [] 
+            for idx, row in df.iterrows():
+                if idx % 10 != 0:
+                    continue
+
+                repeated_scores = []
+                for _ in range(3):
+                    english_sentence = row["Source Text (English)"]
+                    filipino_sentence = row["Target Text (Filipino)"]
+                    user_notes = ["No more additional context, instructions, or information, available. Do not ask anymore.", 'The weights are fine as is. Do not ask anymore.']
+                    result, _, _ = main_loop(english_sentence, filipino_sentence, user_notes, True, True)
+                    repeated_scores.append(result["Predicted_Score"])
+                
+                variation = np.std(repeated_scores) / np.mean(repeated_scores) * 100
+                consistency_variations.append({
+                    "row_index": idx,
+                    "english_sentence": english_sentence,
+                    "filipino_sentence": filipino_sentence,
+                    "scores": repeated_scores,
+                    "variation_percent": variation
+                })
+                print()
+                print(f"Consistency test row {idx} → scores={repeated_scores} variation={variation:.2f}%")
+            avg_var = np.mean([c["variation_percent"] for c in consistency_variations])
+            max_var = np.max([c["variation_percent"] for c in consistency_variations])
+            print(f"\nConsistency results across sampled rows:")
+            print(f"  Avg variation: {avg_var:.2f}%")
+            print(f"  Max variation: {max_var:.2f}%")
+            print(f"Consistency Percentages: {[c['variation_percent'] for c in consistency_variations]}")
+        except Exception as e:
+            print(e)
+            print("Error processing dataset. Exiting.")
+        finally:
+            output_df = pd.DataFrame(consistency_variations)
+            output_df.to_csv(args.out + "_consistency.csv", index=False, encoding='utf-8-sig')
+
+
+    elif args.dataset:
         df = pd.read_csv(args.dataset)
         required = {"Source Text (English)", "Target Text (Filipino)", "Final Score"}
         if not required.issubset(df.columns):
@@ -597,7 +642,7 @@ if __name__ == "__main__":
             print("Error processing dataset. Exiting.")
         finally:
             output_df = pd.DataFrame(results)
-            output_df.to_csv(args.out, index=False, encoding='utf-8-sig')
+            output_df.to_csv(args.out + "_results.csv", index=False, encoding='utf-8-sig')
     else:
         result, memory, thoughts = main_loop()
         print(memory)

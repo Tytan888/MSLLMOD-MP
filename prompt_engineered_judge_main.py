@@ -264,6 +264,7 @@ def run_batch(dataset_path: str, out_path: str):
             total_weight += fluency_weight
 
             entry["Predicted_Score"] = predicted_score / total_weight if total_weight > 0 else None
+            entry["Validation Score"] = row["Final Score"]
             results.append(entry)
 
             print()
@@ -306,6 +307,8 @@ def run_batch(dataset_path: str, out_path: str):
                 variation = np.std(repeated_scores) / np.mean(repeated_scores) * 100
                 consistency_variations.append({
                     "row_index": idx,
+                    "english_sentence": row["Source Text (English)"],
+                    "filipino_sentence": row["Target Text (Filipino)"],
                     "scores": repeated_scores,
                     "variation_percent": variation
                 })
@@ -323,8 +326,11 @@ def run_batch(dataset_path: str, out_path: str):
             })
 
     out_df = pd.DataFrame(results)
-    out_df.to_csv(out_path, index=False)
+    out_df.to_csv(out_path + "_results.csv", index=False)
     print(f"Saved evaluations to {out_path}")
+
+    consistency_df = pd.DataFrame(consistency_variations)
+    consistency_df.to_csv(out_path + "_consistency.csv", index=False)
 
     if consistency_variations:
         avg_var = np.mean([c["variation_percent"] for c in consistency_variations])
