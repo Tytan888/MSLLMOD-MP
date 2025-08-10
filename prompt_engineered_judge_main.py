@@ -177,6 +177,9 @@ def call_gemini(prompt: str):
     global current_requests
     global rate_limit_num
     global rate_limit_wait
+
+    current_requests += 1
+
     if current_requests >= rate_limit_num:
             print()
             print(f"Rate limit exceeded: {current_requests} > {rate_limit_num}")
@@ -230,13 +233,11 @@ def run_batch(dataset_path: str, out_path: str):
             # Normal evaluation
             res = evaluate_row(row["Source Text (English)"], row["Target Text (Filipino)"])
             global current_requests
-            current_requests += 1
             parsed = res["parsed"]
 
             entry = {
                 "Source Text (English)": row["Source Text (English)"],
                 "Target Text (Filipino)": row["Target Text (Filipino)"],
-                "LLM_JSON": json.dumps(parsed, ensure_ascii=False),
                 "Overall_Comment": parsed.get("overall_comment", None)
             }
 
@@ -253,7 +254,6 @@ def run_batch(dataset_path: str, out_path: str):
                 total_weight += weight
 
             res_f = evaluate_row(row["Source Text (English)"], row["Target Text (Filipino)"], fluency=True)
-            current_requests += 1
             parsed_f = res_f["parsed"]
 
             entry["Fluency_Score"] = parsed_f["per_criterion"]["Fluency"]["score"]
@@ -282,7 +282,6 @@ def run_batch(dataset_path: str, out_path: str):
                 repeated_scores = []
                 for _ in range(3):
                     res_c = evaluate_row(row["Source Text (English)"], row["Target Text (Filipino)"])
-                    current_requests += 1
                     parsed_c = res_c["parsed"]
 
                     score_c = 0

@@ -1,0 +1,14 @@
+{
+    "Source Text (English)": "It's raining cats and dogs.",
+    "Target Text (Filipino)": "Umuulan ng pusa at aso.",
+    "Overall_Comment": "The translation is a literal word-for-word rendition of the English idiom 'It's raining cats and dogs,' which makes no sense in Filipino.",
+    "Accuracy_Score": 1,
+    "Accuracy_Explanation": "This is a literal translation of an idiom. 'Umuulan ng pusa at aso' does not convey the meaning of heavy rain in Filipino.",
+    "Completeness_Score": 5,
+    "Completeness_Explanation": "All the words from the source are translated, but the overall meaning is lost due to the idiomatic nature of the source.",
+    "Cultural Appropriateness_Score": 1,
+    "Cultural Appropriateness_Explanation": "The translation is not culturally appropriate as it is a nonsensical literal translation of a foreign idiom.",
+    "Fluency_Score": 1,
+    "Fluency_Explanation": "This sentence is a literal translation of the English idiom 'It's raining cats and dogs.' However, in Filipino, this idiom does not exist and the sentence makes no sense. It is grammatically incorrect in its current form and highly unnatural.",
+    "Predicted_Score": 1.5
+}

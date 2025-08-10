@@ -1,0 +1,42 @@
+{
+    "english_sentence": "With what would you use a ",
+    "filipino_sentence": "Ano ang gagamitin mo ng ",
+    "accuracy_weight": "High",
+    "fluency_weight": "High",
+    "completeness_weight": "Low",
+    "cultural_appropriateness_weight": "Low",
+    "user_notes": [
+        "User provided both English and Filipino sentences.",
+        "User stated that there are no additional instructions to be provided for the translation.",
+        "User confirmed the provided weights are acceptable."
+    ],
+    "tool_notes": [
+        "Similarity between 'With what would you use a ' and 'Ano ang gagamitin mo ng ': 0.9033610820770264",
+        "English definition of 'with': ['Along, together with others, in a group, etc.', 'Against.', 'In the company of; alongside, close to; near to.', 'In addition to; as an accessory to.', 'Used to indicate simultaneous happening, or immediate succession or consequence.', 'In support of.', 'In regard to.', 'To denote the accomplishment of cause, means, instrument, etc; – sometimes equivalent to by.', 'Using as an instrument; by means of.', 'Using as nourishment; more recently replaced by on.', 'Having, owning.', 'Affected by (a certain emotion or condition).', 'Prompted by (a certain emotion).']",
+        "Top results for Tagalog word 'ano': 1: anó: 1[question word]what2is that right?; isn't that right?; right?3hello / what's up (informal)177 2: Ano?!: [interjection]Say what?!(root: ano)4 ",
+        "Top results for Tagalog word 'ang': 1: ang: 1[article]the2[adverb]an adjective intensifier•so•very•too (i.e., too much)178 2: mag-ang-ang: [verb]to stammer or stutter(root: ang) ",
+        "Top results for Tagalog word 'gagamitin': 1: gamitin: [verb]to use something•to apply something•to make use of something•to put something to useObject Focus(-in Verbverb, root: gamit)Conjugations: ginamit, ginagamit,gagamitin39 2: gamit: 1[noun]stuff•thing•belongings•possessions2using•used3[noun]tool•tools23 ",
+        "Top results for Tagalog word 'mo': 1: mo: 1[ng pronoun]you (second person singular)2[possessive]your•yours177 2: sumakáy: [verb]to ride (a car, train, carabao, etc.)Actor Focus(-um- verb, root: sakay)Conjugations: sumakáy, sumásakáy, sásakáy18 ",
+        "Top results for Tagalog word 'ng': 1: ng: [article]a•an•of•for•by•some•with•to•[grammar]endingligature that can be used to join two words together (-ng)178 2: pangisáy: [verb]to shake or wriggle violently like one havingconvulsionsObject Focus(pang- verb, root: ngisay)Conjugations: pinangisáy "
+    ],
+    "past_questions": [
+        "Please provide the English sentence and the Filipino translation.",
+        "Please provide additional context or instructions for the translation, if any.",
+        "Are the following weights acceptable: Accuracy is High, Fluency is High, Completeness is Low, and Cultural Appropriateness is Low?"
+    ],
+    "has_asked_for_additional_instructions": true,
+    "has_asked_if_weights_are_acceptable": true,
+    "english_words_queried": [
+        "with"
+    ],
+    "filipino_words_queried": [
+        "ano",
+        "ang",
+        "gagamitin",
+        "mo",
+        "ng"
+    ],
+    "similarities_queried": [
+        "With what would you use a  | Ano ang gagamitin mo ng  | 0.9033610820770264"
+    ]
+}

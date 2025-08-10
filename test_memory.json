@@ -1,0 +1,37 @@
+{
+    "english_sentence": "It's raining cats and dogs.",
+    "filipino_sentence": "Umuulan ng pusa at aso.",
+    "accuracy_weight": "High",
+    "fluency_weight": "High",
+    "completeness_weight": "Low",
+    "cultural_appropriateness_weight": "Low",
+    "user_notes": [
+        "no more"
+    ],
+    "tool_notes": [
+        "English definition of 'cats': ['An animal of the family Felidae:', 'A person:', 'A strong tackle used to hoist an anchor to the cathead of a ship.', \"Short form of cat-o'-nine-tails.\", 'A sturdy merchant sailing vessel (now only in \"catboat\").', 'The game of \"trap and ball\" (also called \"cat and dog\").', 'The pointed piece of wood that is struck in the game of tipcat.', 'A vagina, a vulva; the female external genitalia.', 'A double tripod (for holding a plate, etc.) with six feet, of which three rest on the ground, in whatever position it is placed.', 'A wheeled shelter, used in the Middle Ages as a siege weapon to allow assailants to approach enemy defences.', 'To hoist (the anchor) by its ring so that it hangs at the cathead.', \"To flog with a cat-o'-nine-tails.\", 'To vomit.', 'To go wandering at night.', 'To gossip in a catty manner.', 'A program and command in Unix that reads one or more files and directs their content to the standard output.', 'To apply the cat command to (one or more files).', 'To dump large amounts of data on (an unprepared target) usually with no intention of browsing it carefully.', 'A catapult.', 'Any of a variety of earth-moving machines. (from their manufacturer Caterpillar Inc.)', 'A caterpillar drive vehicle (a ground vehicle which uses caterpillar tracks), especially tractors, trucks, minibuses, and snow groomers.', 'A twin-hulled ship or boat.', 'A quarrelsome woman; a scold.', 'A raft of three pieces of wood lashed together, the middle piece being longer than the others, and serving as a keel on which the rower squats while paddling.', 'An old kind of fireship.', 'A group, often named or numbered, to which items are assigned based on similarity or defined criteria.', 'A collection of objects, together with a transitively closed collection of composable arrows between them, such that every object has an identity arrow, and such that arrow composition is associative.', 'Any fish of the order Siluriformes, mainly found in fresh water, lacking scales, and having barbels like whiskers around the mouth', 'Someone who creates a fake profile on a social media platform in order to deceive people.', 'Such a fake profile.']",
+        "English definition of 'dogs': ['A mammal, Canis familiaris or Canis lupus familiaris, that has been domesticated for thousands of years, of highly variable appearance due to human breeding.', 'Any member of the Family Canidae, including domestic dogs, wolves, coyotes, jackals, foxes, and their relatives (extant and extinct); canid.', 'A male dog, wolf or fox, as opposed to a bitch or vixen.', 'A dull, unattractive girl or woman.', 'A man (derived from definition 2).', 'A coward.', 'Someone who is morally reprehensible.', 'A sexually aggressive man (cf. horny).', 'Any of various mechanical devices for holding, gripping, or fastening something, particularly with a tooth-like projection.', 'A click or pallet adapted to engage the teeth of a ratchet-wheel, to restrain the back action; a click or pawl. (See also: ratchet, windlass)', 'A metal support for logs in a fireplace.', 'The eighteenth Lenormand card.', 'A hot dog.', 'Underdog.', '(almost always in the plural) Foot.', '(from \"dog and bone\") Phone or mobile phone.', 'One of the cones used to divide up a racetrack when training horses.', 'A flop; a film that performs poorly at the box office.', 'To pursue with the intent to catch.', 'To follow in an annoying or harassing way.', 'To fasten a hatch securely.', 'To watch, or participate, in sexual activity in a public place.', \"To intentionally restrict one's productivity as employee; to work at the slowest rate that goes unpunished.\", 'To criticize.', 'To divide (a watch) with a comrade.', 'Meat from a dog eaten as food.', 'Meat prepared to be given to a dog as food.', 'An insult intended to assert hyperbolically that another person has value only as a corpse to be fed to a dog.', \"Feet, from rhyming slang dog's meat.\", '(usually with the) A greyhound racing event; the sport of greyhound racing.', 'Fasteners securing a watertight hatch.']",
+        "Top results for Tagalog word 'pusa': 1: pusà: [noun]cat38 Example Sentences 2: puság: [noun]leap or jump or wriggle of or like a fish 3: pusang galâ: [noun]dickhead•motherfucker* used other than figuratively or idiomatically: seepusa,  gala(root: pusa) ",
+        "Top results for Tagalog word 'aso': 1: aso: [noun]dog•canine85 Example Sentences 2: asó: [noun]smoke•steam3 Example Sentences 3: asog: sterile•barren•infertile•unproductive•fruitless ",
+        "Similarity between 'It's raining cats and dogs.' and 'Umuulan ng pusa at aso.': 0.7355068922042847"
+    ],
+    "past_questions": [
+        "Please provide the English sentence and the Filipino translation.",
+        "Are the following weights acceptable: Accuracy weight is High, Fluency weight is High, Completeness weight is Low, and Cultural appropriateness weight is Low?",
+        "Please provide any additional context or instructions for the translation.",
+        "Are the following weights acceptable: Accuracy weight is High, Fluency weight is High, Completeness weight is Low, and Cultural appropriateness weight is Low?"
+    ],
+    "has_asked_for_additional_instructions": true,
+    "has_asked_if_weights_are_acceptable": true,
+    "english_words_queried": [
+        "cats",
+        "dogs"
+    ],
+    "filipino_words_queried": [
+        "pusa",
+        "aso"
+    ],
+    "similarities_queried": [
+        "It's raining cats and dogs. | Umuulan ng pusa at aso. | 0.7355068922042847"
+    ]
+}
