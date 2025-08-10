@@ -2,13 +2,15 @@ import os
 import json
 import time
 import argparse
+import traceback
+
+import numpy as np
 import pandas as pd
-import statistics
+
 from scipy.stats import spearmanr
 from tqdm import tqdm
+
 import google.generativeai as genai
-import numpy as np
-import traceback
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
