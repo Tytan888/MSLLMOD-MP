@@ -394,9 +394,8 @@ def run_single(english_text, filipino_text, out_path):
     print(f"Overall Comment: {entry['Overall_Comment']}")
     print()
 
-    json_output = json.dumps(entry, ensure_ascii=False)
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(json_output)
+    with open(out_path + ".json", "w", encoding="utf-8") as f:
+        json.dump(entry, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

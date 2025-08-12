@@ -629,14 +629,22 @@ if __name__ == "__main__":
         
         results = []
         try:
-            for _, row in df.iterrows():
+
+            for idx, row in df.iterrows():
                 english_sentence = row["Source Text (English)"]
                 filipino_sentence = row["Target Text (Filipino)"]
                 user_notes = ["No more additional context, instructions, or information, available. Do not ask anymore.", 'The weights are fine as is. Do not ask anymore.']
-                result, _, _ = main_loop(english_sentence, filipino_sentence, user_notes, True, True)
+                result, memory, thoughts = main_loop(english_sentence, filipino_sentence, user_notes, True, True)
                 result["Validation Score"] = row["Final Score"]
                 results.append(result)
                 print(result)
+                print()
+                with open(args.out + "_" + str(idx) + "_memory.json", 'w', encoding='utf-8') as f:
+                    json.dump(memory.memory, f, ensure_ascii=False, indent=4)
+                with open(args.out + "_" + str(idx) + "_thoughts.json", 'w', encoding='utf-8') as f:
+                    json.dump(thoughts, f, ensure_ascii=False, indent=4)
+
+
         except Exception as e:
             print(e)
             print("Error processing dataset. Exiting.")
